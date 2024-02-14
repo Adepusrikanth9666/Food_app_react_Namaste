@@ -1,0 +1,188 @@
+Epsoide_1 - Incption 
+
+1. What is Emmet ?
+ --> “Emmet is a plug in for many popular text editors which greatly improves HTML & CSS workflow:”
+--> It gives short cut in csss and HTML
+example : -  ‘!` - it generate teh HTML skeleton of the HTML5
+            div{This is a div}  - it gives <div> This is a div</div>
+            ul>li it gives - <ul><li></li></ui>
+            ul>li{$}*3 <ul><li>1</li><li>2</li><li>3</li></ul>
+            div#main.container.responsive - <div id="main" class = "container responsive" > </div>
+
+2. What is teh differnece between framework and library ?
+-->  libraries target a specific functionality, while a framework tries to provide everything
+     required to develop a complete application.
+
+3.What s CDN and?why do we use it ..?
+-->A CDN (Content Delivery Network) is a group of servers spread out over many locations. 
+These servers store duplicate copies of data so that servers can fulfill data requests based on which servers are closest to the respective end-users.
+CDNs make for fast service less affected by high traffic.
+
+Use case :-
+    CDNs are used widely for delivering stylesheets and JavaScript files (static assets) of libraries like Bootstrap, jQuery etc.
+    Serving libraries' static assets over CDN lowers the request burden on an organization's own servers.
+    CDNs are already configured with proper cache settings. Using a CDN saves further configuration for static assets on your own servers.
+
+
+4. Why React is known as REact ?
+    It was developed by Facebook, and the name “React” was chosen because 
+    it is meant to help developers build user interfaces that are fast and responsive, or “reactive.”
+    The library was designed to “react” to changes in data.
+
+5. What is cross-orgin in script tag?
+    The crossorigin attribute sets the mode of the request to an HTTP CORS Request.
+    Web pages often make requests to load resources on other servers. Here is where CORS comes in.
+
+6. What is the difference between Reactand React-DOm ?
+    React: React is a javascript library, designed for building better user interfaces.
+    React-DOM: React-DOM is a complimentary library to React which glues React to the browser DOM, where the intraction to be done with the browserr DOM.
+
+7.What is the difference between react.development.js and react.production.js via CDN ?
+    Development (Dev) Link:
+        The development link is typically used during the development phase of your application.
+        It includes additional debugging tools, warnings, and helpful error messages.
+        It is larger in file size and may negatively impact the performance of your application.
+        It is not optimised for production use.
+    Production (Prod) Link:
+        The production link is meant for deploying your application in a production environment.
+        It excludes development-specific tools, warnings, and error messages.
+        It is smaller in file size, which improves the performance of your application.
+        It is optimized for production use.
+
+What is Async and Differ in HTML ?
+    Async in script tag
+        eg: <script async></script>
+        it is used when the HTM parsing will take place and Parallelly it execute scripts and fetch the data and execute of it and again coontinue withe the HTML parsing.
+    defer in script tag
+         eg: <script defer></script>
+        It is used when then the Html parsing continous and it fetch tje script data nd it execute the scriprt fetch data after the HTML parsing is completed.
+
+
+
+EPISODE_2:----------------- Ignite Yoy App -------------------------------------------------------------------------------------
+
+    1. What is Npm ?
+        - it is a package manager that helps us to plugin the requried packages in to our App.and install it .
+
+    2.What is parcel/webpack? why do we need,..?
+
+        Parcel and webpacks are bundles whihc is used to code our code make it buldled in to a single file make ready or push to the production.
+        there are three rdifferent types of bundles 
+            i.Webpack - mostly used 
+            ii.Parcel - gained popularity in recent years
+            iii.Rollup
+        Its has there own merits and drawbacks
+
+        PARCEL :
+            Became more popularity in recent years
+            ease of use
+            it requries less configuration and makes out of the box with no additional setup.
+            for small projects and developers who getting statrs with bundilers.
+
+    3.What is .parcel-cache?
+        
+        Parcel-cacheis folder which generate after after the build (npx parcel build index.html)
+        So this folder will cache our application data and if any changes it will modify the particular new added data and it will render on to the apppplication.
+        so it reduce the build time and improve the performance of the appplication.
+
+    4.What is npx?
+
+        Node package execute (NPX) it allows the developer to execute any javascript package available on the NPm registry without out installing it .
+        it automaticlly install the requreid dependencies to run the app.
+
+    5.What is difference between the dependencies and devdependenciess?
+
+        devDependencies: This property contains the names and versions of the node modules which are required only for development purposes 
+        like ESLint, JEST, babel etc.
+            npm i -D [npm package name]
+
+        dependencies: This property contains the names and versions of the node modules which are also required at runtime. 
+        These modules will also be downloaded as dependent package if the application is published as NPM package and used as npm install [package name].
+            npm install --save [npm package name]
+
+    6.What is Tree shaking?
+
+         Tree shaking or dead code elimination means that unused modules will not be included in the bundle during the build process.
+
+    7. What is Hot Module Replacement?
+
+        What HMR basically does is, instead of reloading the whole application when it detects a change, 
+        it only replaces the modules that have been changed without reloading the application or refreshing the browser.
+
+    8. List down your favirote 5 superpowerful of parcel and decribe any of 3 in your  owm words?
+
+        Development - Parcel includes a development server out of the box supporting hot reloading, HTTPS, an API proxy, and more.
+        code Splitting - Parcel supports zero configuration code splitting out of the box. This allows you to split your application 
+                         code into separate bundles which can be loaded on demand, resulting in smaller initial bundle sizes and faster load times.
+        Targets -   Parcel can compile your source code in multiple different ways simultaneously. These are called targets. For example, 
+                    you could have a “modern” target that targets newer browsers and a “legacy” target for older browsers.
+
+        Production - Parcel’s production mode automatically bundles and optimizes your application for production. It can be run using the parcel build command.
+                        parcel build src/index.html
+        CLI -  The parcel CLI is the most common way to use Parcel. It supports three different commands: serve, watch, and build.
+
+    9. What is .gitignore?what should we add and not add into it.?
+
+        .gitignore is a filte what what will not push or commit to the git repo or cloud.
+        what are the file names we inclued in th .gitignore file it will not add or push to the git.
+        we add files which will install or addd when we wnter the commendsi in the server.
+
+    10. What is the difference between the package.json and package.lock.json ?
+
+        package.json file most important file that inludes all the package versuions and all the requried data to configure the appp.
+
+        package.lock.json - it is a file which contains the all the track of the package installled versions ,will make a track  of it.It locks the current package we it is installed.
+
+    11. why should i not modify the package.lock.json ?
+
+        no IT SHOULD NOT BE EDITED BECAUSE THE DATA WHICH IS PRESENT IS LOCK WHEN THE INSTALING THE PACKAGES LOCKS THERE VERSION AADN IT WILL storE AND ALSO THE HASH KEY USES IN THE PRODUCTION FOR The compaRITION OF THE HASH KEY AND MAKE THE PRODUCTION READY.
+
+    12. What is node_modeuels ? Is it good to push files to Git?
+
+        Node_module is a folder which consist of all the packages dependencies which are installed in the package.json.
+        NO, it not requried to push these files to the git because any how in the server by using the commands it will install in the server.
+
+    13. What is the dist folder?
+
+        dist folder is the compression(minimized versio of the source code) of all the code of the app 
+
+    14.What s browserlist ? read about the dif bundlers :vite,webpack,parcel ?
+
+        browserlist is dependecy that how our app will enable in the particuar or latest browsers.
+
+    15. Read about ^ - caret  and ~ tilda?
+
+            package : 3.    2.     4
+                      |     |      |
+                    Major  minor   patch
+
+
+EPISODE: 3 ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    1.What is JSX ?
+        React docs :JSX is a syntax extension for JavaScript that lets you write HTML-like markup inside a JavaScript file. Although there are other ways to write components, most React developers prefer the conciseness of JSX, and most codebases use it.
+        JSX is a (javascript XML file),It is a simple Javascript file which consist of HTML like code and place them in the DOM without any createElement() and or appendChild() methods.
+        and it is an ES6 feature.
+        JSX is a syntax extension, while React is a JavaScript library.
+
+    2.What are the Super powers of JSX?
+        JSX as variables
+        Expressions in JSX
+        Attributes in JSX
+        Props in JSX
+        Conditionally Rendering Components
+
+    3.Role of Type attribute in Script Tag?What options can i use there?
+
+        The type attribute of the <script> element indicates the type of script represented by the element:
+         a classic script, an import map, a JavaScript module, speculation rules, or a data block.
+
+        importmap
+        module
+        speculationrules
+        
+
+Episode - 4: ----------------------------------------------------------------------------------------------------------
+
+
+    
