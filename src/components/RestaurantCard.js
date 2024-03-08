@@ -8,9 +8,12 @@ export const RestaurantCard = (props) => {
   return (
     <div
       data-testid="restCard"
-      className="m-4 p4 w-[230px] rounded-lg bg-zinc-300 hover:bg-gray-100 "
+      className="m-4 p4 w-[280px] h-[430px] rounded-lg bg-zinc-300 hover:bg-gray-100"
     >
-      <img className="rounded-lg" src={CDN_URL + cloudinaryImageId} />
+      <img
+        className="rounded-lg h-52 w-full"
+        src={CDN_URL + cloudinaryImageId}
+      />
 
       <div className="p-3">
         <div className="font-bold py-4 text-lg">{name}</div>

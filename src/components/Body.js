@@ -25,12 +25,6 @@ const Body = () => {
     );
     const json = await data.json();
 
-    console.log("json", json.data?.cards[1]?.card?.card?.header?.title);
-    console.log(
-      "json",
-      json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
-
     setRestaurantList(
       json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
@@ -38,8 +32,6 @@ const Body = () => {
       json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
-
-  console.log(restaurantList);
 
   const onlineStatus = useOnlineStatus();
 
@@ -95,7 +87,7 @@ const Body = () => {
 
   return (
     <div className="body">
-      <div className="filter flex">
+      <div className="filter flex items-center">
         <div className="m-4 p-4">
           <input
             data-testid="searchInput"
